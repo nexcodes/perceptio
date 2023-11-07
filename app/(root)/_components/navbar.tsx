@@ -1,7 +1,7 @@
 "use client";
 
 import { useConvexAuth } from "convex/react";
-import { SignInButton } from "@clerk/clerk-react";
+import { SignInButton, UserButton } from "@clerk/clerk-react";
 
 import { useScrollTop } from "@/hooks/use-scroll-top";
 import { cn } from "@/lib/utils";
@@ -42,6 +42,9 @@ export const Navbar = () => {
                   Enter Perceptio
                 </Link>
               </Button>
+              <UserButton 
+                afterSignOutUrl="/"
+              />
             </>
           )
         }
