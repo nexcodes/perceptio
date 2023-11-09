@@ -2,6 +2,7 @@
 
 import { ThemeProvider } from "./theme-provider";
 import { ConvexClientProvider } from "./convex-providers";
+import { ModelProvider } from "./model-provider";
 
 export function Provider({ children }: { children: React.ReactNode }) {
   return (
@@ -13,6 +14,7 @@ export function Provider({ children }: { children: React.ReactNode }) {
         disableTransitionOnChange
         storageKey="perceptio-theme"
       >
+        <ModelProvider />
         {children}
       </ThemeProvider>
     </ConvexClientProvider>
