@@ -17,7 +17,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
     );
   }
 
-  if (!isAuthenticated && !isLoading) {
+  if (!isAuthenticated) {
     return redirect("/");
   }
 
